@@ -4,158 +4,322 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trade With Munaaf</title>
+<title>Gokul Chhabra | Stock Market Updates</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1601958171425562');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1601958171425562&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    color:#fff;
+    background:
+        radial-gradient(circle at top,#123b52 0%,#07131d 45%,#02070b 100%);
 }
-
-/* CARD */
 
 .container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
-
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
+    width:100%;
+    max-width:440px;
 }
 
-/* LOGO */
-
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
+.card{
+    position:relative;
+    padding:30px 22px 24px;
+    text-align:center;
+    border-radius:26px;
+    background:rgba(8,18,28,.94);
+    border:1px solid rgba(0,229,255,.25);
+    box-shadow:
+        0 0 30px rgba(0,229,255,.12),
+        0 20px 60px rgba(0,0,0,.55);
+    overflow:hidden;
 }
 
-/* TEXT */
-
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
+.card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:#00e5ff;
+    filter:blur(100px);
+    opacity:.10;
+    top:-80px;
+    left:-60px;
 }
+
+/* TOP BADGE */
+
+.live{
+    position:relative;
+    display:inline-block;
+    margin-bottom:18px;
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.4px;
+    color:#00e5ff;
+    background:rgba(0,229,255,.08);
+    border:1px solid rgba(0,229,255,.25);
+}
+
+/* PERFECT ROUND PROFILE IMAGE */
+
+.profile{
+    position:relative;
+
+    width:120px;
+    height:120px;
+
+    display:block;
+    margin:0 auto 14px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+    object-position:center;
+
+    aspect-ratio:1 / 1;
+
+    border:4px solid #00e5ff;
+
+    background:#07131d;
+
+    box-shadow:
+        0 0 0 3px rgba(0,229,255,.10),
+        0 0 25px rgba(0,229,255,.45),
+        0 0 55px rgba(0,229,255,.15);
+
+    overflow:hidden;
+}
+
+/* NAME */
 
 h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
+    position:relative;
+    margin:5px 0 12px;
+
+    font-size:clamp(25px,7vw,34px);
+    line-height:1.2;
+    font-weight:800;
+
+    background:linear-gradient(
+        90deg,
+        #ffd700,
+        #ffffff,
+        #00e5ff,
+        #ffd700
+    );
+
+    background-size:250% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 3s linear infinite;
 }
 
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
+@keyframes shine{
+    0%{
+        background-position:0% center;
+    }
+
+    100%{
+        background-position:250% center;
+    }
 }
 
-/* BUTTON */
+/* SUBTITLE */
+
+.subtitle{
+    position:relative;
+    color:#cbd5df;
+    font-size:14px;
+    line-height:1.7;
+    margin:0 auto 22px;
+    max-width:360px;
+}
+
+/* TELEGRAM BUTTON */
 
 .btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
+    position:relative;
+
+    display:block;
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:.3px;
+
+    color:#001014;
+
+    background:linear-gradient(
+        90deg,
+        #00e5ff,
+        #00ffd5
+    );
+
+    box-shadow:
+        0 8px 25px rgba(0,229,255,.25);
+
+    transition:.25s;
 }
 
 .btn:hover{
-background:#16a34a;
-transform:scale(1.03);
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(0,229,255,.4);
 }
 
-/* TRUST BOX */
-
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
+.pulse{
+    animation:pulse 2s infinite;
 }
 
-/* LIST */
+@keyframes pulse{
 
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
+    0%{
+        box-shadow:0 0 0 0 rgba(0,229,255,.45);
+    }
+
+    70%{
+        box-shadow:0 0 0 12px rgba(0,229,255,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(0,229,255,0);
+    }
+
 }
 
-.points li{
-margin:8px 0;
+/* FEATURES */
+
+.list{
+    position:relative;
+
+    margin-top:22px;
+
+    display:grid;
+    gap:9px;
 }
 
-/* URGENCY */
+.list div{
+    padding:11px 10px;
+
+    border-radius:11px;
+
+    text-align:left;
+
+    font-size:12px;
+    font-weight:600;
+
+    color:#e8f7fa;
+
+    background:rgba(255,255,255,.045);
+
+    border:1px solid rgba(255,255,255,.07);
+}
+
+/* BOTTOM */
 
 .timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
+    position:relative;
+
+    margin-top:20px;
+
+    font-size:12px;
+    font-weight:600;
+
+    color:#9db0bd;
 }
 
-/* SOCIAL PROOF */
+/* AGENCY */
 
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
+.agency{
+    position:relative;
+
+    margin-top:18px;
+    padding-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    font-size:10px;
+    color:#71818c;
+
+    letter-spacing:.3px;
 }
 
-/* FOOTER BRAND */
+.agency a{
+    color:#00e5ff;
 
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
+    text-decoration:none;
+
+    font-weight:700;
 }
 
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
+.agency a:hover{
+    text-decoration:underline;
 }
 
-.footer a:hover{
-text-decoration:underline;
-}
+/* MOBILE */
 
-/* RISK */
+@media(max-width:380px){
 
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
+    .card{
+        padding:25px 17px 20px;
+    }
+
+    .profile{
+        width:105px;
+        height:105px;
+    }
+
+    h2{
+        font-size:26px;
+    }
+
+    .btn{
+        font-size:15px;
+    }
+
 }
 
 </style>
@@ -165,55 +329,67 @@ opacity:0.5;
 
 <div class="container">
 
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
+<div class="card">
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+    <div class="live">
+        📈 PREMIUM STOCK MARKET UPDATES
+    </div>
 
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
+    <!-- ROUND PROFILE IMAGE -->
 
-<!-- TOP BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+    <img
+        src="https://i.ibb.co/Xf77sCJg/Whats-App-Image-2026-09-10-at-4-39-18-PM.jpg"
+        class="profile"
+        alt="Gokul Chhabra"
+        loading="eager"
+    >
 
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
-</div>
+    <h2>💎 GAUTAM JHA 💎</h2>
 
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
+    <p class="subtitle">
+        Get Daily Stock Market Updates, Market Analysis
+        & Trading Insights
+    </p>
 
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+    <a
+        href="https://t.me/+ermvEgFgGToxMWVl"
+        class="btn pulse"
+        onclick="fbq('track','Lead');"
+    >
+        🚀 JOIN TELEGRAM
+    </a>
 
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
+    <div class="list">
 
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
+        <div>✔ NIFTY 50 ANALYSIS</div>
 
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
+        <div>✔ BANK NIFTY UPDATES</div>
 
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
+        <div>✔ STOCK MARKET INSIGHTS</div>
+
+        <div>✔ INTRADAY MARKET UPDATES</div>
+
+        <div>✔ DAILY MARKET LEVELS</div>
+
+    </div>
+
+    <div class="timer">
+        📊 FREE MARKET UPDATES
+    </div>
+
+    <!-- AGENCY CREDIT -->
+
+    <div class="agency">
+        Ads & Landing Page by
+        <a
+            href="https://telegram.me/+3XoqJNLxYHswNTc1"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            AdBuildagency
+        </a>
+    </div>
+
 </div>
 
 </div>
